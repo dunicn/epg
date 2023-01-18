@@ -3,11 +3,17 @@ import styled from 'styled-components'
 import { formatShowTime, extractTime } from '../helpers'
 
 const StyledShow = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
   color: white;  
   width: ${({ width }) => width}rem;
   height: 5rem;
   /* border-style: ridge; */
   background-color: ${({ isLive }) => isLive ? '#202020' : 'black'};
+  font-family: "Courier";
   box-shadow:1px 1px 1px 1px grey inset;  
 `
 

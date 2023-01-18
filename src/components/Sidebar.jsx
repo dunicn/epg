@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
+import media from '../media'
 
 const StyledChannels = styled.ul`
-  /* margin-top: 5rem; */
+ /* margin-top: 5rem; */
   position: sticky;
-  width: 5rem;
+  width: 10rem;
   float: left;
   left: 0;
   top: 0;
@@ -14,14 +15,27 @@ const StyledChannels = styled.ul`
 
 const StyledChannel = styled.li`
   width: 100%; 
-  text-align:center;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
   height: 5rem;
   box-shadow:1px 1px 1px 1px grey inset;  
-  /* padding-top: 1rem; */
-  /* text-align: center; */
-  background-color: #202020;
+  background-color: purple;
   color: white;
-  /* border-style: ridge; */
+  font-family: "Courier";
+  ${media.tablet`
+  background-color: green;
+    
+    /* height: 245px; */
+    /* padding: 3rem 6rem; */
+  `};
+  ${media.desktop`
+  background-color: #323232;
+    /* padding: 3rem 6rem;
+    height: 345px; */
+  `};
+  
 `
 
 const Sidebar = ({ channels }) => {

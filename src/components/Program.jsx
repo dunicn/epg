@@ -2,70 +2,61 @@ import React from 'react'
 import styled from 'styled-components'
 import Show from './Show'
 
-const StyledChannels = styled.section`
+const StyledProgram = styled.section`
   display: flex;
   flex-direction: column;
-  margin-left: 5rem;
-  margin-top: 3rem;
-  /* float: left; */
-  /* z-index: 5; */
-  /* background-color: red; */
+  margin-left: 10rem;
+  /* margin-top: 3rem; */
   list-style: none;
+  /* box-shadow:1px 1px 1px black; */
+  max-height: 100%;
 `
 
-const StyledChannel = styled.li`
-  width: 100%;
-  height: 5rem;
-  /* padding-top: 0.5rem; */
-  background-color: #202020;
-  color: white;
-`
 
-const StyledUl1 = styled.ul`
+const StyledChannels = styled.ul`
   display: flex;
   flex-direction: column;
-  /* padding-top: 5rem; */
   list-style: none;
-
 `
-const StyledUl2 = styled.ul`
+const StyledChannel = styled.ul`
   display: flex;
   flex-direction: row;
   list-style: none;
+  width: 480rem;
+  /* width: 100%; */
+  /* box-shadow:1px 1px 1px 1px black inset; */
+  box-shadow:1px 1px 1px black;
+
+
 
 `
 
-const StyledPrograme = styled.section`
-  /* left: 5rem;  */
-  /* margin-top: 5rem; */
-`
-
-const Programe = ({ channels }) => {
+const Program = ({ channels }) => {
   return (
-    <StyledChannels>
+    <StyledProgram>
       {/* <StyledPrograme> */}
-      <StyledUl1>
+      <StyledChannels>
         {
           channels.map(channel => (
             <li key={channel.id}>
               {/* <h1>{channel.title}</h1> */}
-              <StyledUl2>
+              <StyledChannel>
                 {channel.schedules.map(show => (
                   // <StyledChannel key={Math.random()}>
                   <Show key={Math.random()} show={show} />
                   // </StyledChannel>
                 ))}
-              </StyledUl2>
+              </StyledChannel>
             </li>
 
           ))
         }
-      </StyledUl1>
+      </StyledChannels>
 
       {/* </StyledPrograme> */}
-    </StyledChannels>
+    </StyledProgram>
 
   )
 }
 
-export default Programe
+export default Program

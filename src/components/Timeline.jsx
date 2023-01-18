@@ -5,22 +5,43 @@ const StyledHours = styled.div`
   display: flex;
   flex-direction: row;
   list-style: none;
-  position: absolute;
-  z-index: 3;
+  /* position: absolute; */
+  position: relative;
+  width: 480rem;
   top: 0;
+  /* margin-top: 0; */
+  z-index: 3;
   /* left: 5rem; */
-  margin-left: 5rem;
-  background-color: #202020;
+  margin-left: 10rem;
+  background-color: #323232;
   height: 3rem;
+  /* > * {
+      &:first-child {
+         margin-left: 10rem;
+      }
+    } */
 `
 
 const StyledHour = styled.li`
   width: 20rem;
   /* height: 100%; */
   /* padding-bottom: 1rem; */
-  padding-top: 1.5rem;
+  /* padding-top: 1.5rem; */
   color: white;
+  /* box-shadow: 1px 0px 0px grey; */
+  display: flex;
+  align-items: center;
+  /* margin-left: -1.1rem; */
+  justify-content: start;
+  border-right: 1px solid;
   /* border: dotted; */
+  border-image: linear-gradient(to , #000 50%, transparent 50%) 100% 1;
+
+`
+
+const StyledHourP = styled.p`
+  margin-left: -1.1rem;
+  color: white;
 `
 
 const Timeline = () => {
@@ -32,9 +53,16 @@ const Timeline = () => {
 
 
   return (
-    <StyledHours>
-      {hours.map(hour => <StyledHour key={hour}>{hour}</StyledHour>)}
-    </StyledHours>
+    <>
+      <StyledHours>
+        {hours.map(hour =>
+          <StyledHour key={hour}>
+            <StyledHourP>{hour}</StyledHourP>
+          </StyledHour>)}
+      </StyledHours>
+      {/* <StyledDivider>
+      </StyledDivider> */}
+    </>
   )
 }
 
