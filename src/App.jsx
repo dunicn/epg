@@ -54,7 +54,7 @@ const App = () => {
 const StyledApp = styled.div`
   text-align: center;
   width: fit-content;
-  height: 100vh;
+  height: 100%;
   background-color: #323232;
 `
 
