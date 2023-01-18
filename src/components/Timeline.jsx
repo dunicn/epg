@@ -24,6 +24,8 @@ const StyledHours = styled.div`
 
 const StyledHour = styled.li`
   width: 20rem;
+  height: 1rem;
+  margin-top: 2rem;
   /* height: 100%; */
   /* padding-bottom: 1rem; */
   /* padding-top: 1.5rem; */
@@ -33,7 +35,8 @@ const StyledHour = styled.li`
   align-items: center;
   /* margin-left: -1.1rem; */
   justify-content: start;
-  border-right: 1px solid;
+  border-right: 0.5px solid;
+  border-left: 0.5px solid;
   /* border: dotted; */
   border-image: linear-gradient(to , #000 50%, transparent 50%) 100% 1;
 
@@ -42,6 +45,7 @@ const StyledHour = styled.li`
 const StyledHourP = styled.p`
   margin-left: -1.1rem;
   color: white;
+  margin-bottom: 2rem;
 `
 
 const Timeline = () => {

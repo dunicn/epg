@@ -5,11 +5,11 @@ import media from '../media'
 const StyledChannels = styled.ul`
  /* margin-top: 5rem; */
   position: sticky;
+  top: 0;
+  left: 0;
   width: 10rem;
   float: left;
-  left: 0;
-  top: 0;
-  z-index: 4;
+  z-index: 11;
   list-style: none;
 `
 

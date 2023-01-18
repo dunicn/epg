@@ -9,7 +9,7 @@ const StyledProgram = styled.section`
   /* margin-top: 3rem; */
   list-style: none;
   /* box-shadow:1px 1px 1px black; */
-  max-height: 100%;
+  /* max-height: 100%; */
 `
 
 
