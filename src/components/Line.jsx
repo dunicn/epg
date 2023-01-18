@@ -2,8 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { getMomentInDay } from '../helpers'
 
-// height: ${(height) => height};
 
+const Line = ({ channels }) => {
+
+  const linePosition = (24 * 20) / (2400 / getMomentInDay(new Date())) + 10;
+
+  return (
+    <>
+      <StyledLineTime left={linePosition - 0.2} >
+      </StyledLineTime >
+      <StyledLineChannels left={linePosition - 0.1} height={channels.length * 5 + 3}>
+      </StyledLineChannels>
+    </>
+  )
+}
 
 const StyledLineTime = styled.div`
   width: 5px;
@@ -22,19 +34,5 @@ const StyledLineChannels = styled.div`
   z-index: 10;
   position: absolute;
 `
-
-const Line = ({ channels }) => {
-
-  const linePosition = (24 * 20) / (2400 / getMomentInDay(new Date())) + 10;
-
-  return (
-    <>
-      <StyledLineTime left={linePosition - 0.2} >
-      </StyledLineTime >
-      <StyledLineChannels left={linePosition - 0.1} height={channels.length * 5 + 3}>
-      </StyledLineChannels>
-    </>
-  )
-}
 
 export default Line

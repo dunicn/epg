@@ -2,11 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import media from '../media'
 
+const Button = ({ scrollToCurrent }) => {
+
+  return (
+    <StyledButton onClick={() => scrollToCurrent()}>Now</StyledButton>
+  )
+}
 
 const StyledButton = styled.button`
   position: fixed;
-  right: 15rem;
-  bottom: 10rem;
+  right: 2rem;
+  bottom: 3rem;
   background-color: orange;
   color: white;
   border: none;
@@ -17,28 +23,17 @@ const StyledButton = styled.button`
   font-size: 16px;
   z-index: 11;
   border-radius: 0.5rem;
-  ${media.tablet`
-  background-color: orange;
-  right: 15rem;
-  bottom: 10rem;
-    
-    /* height: 245px; */
-    /* padding: 3rem 6rem; */
-  `};
-  ${media.desktop`
-  background-color: orange;
-  right: 15rem;
-  bottom: 10rem;
-    /* padding: 3rem 6rem;
-    height: 345px; */
-  `};
+    ${media.tablet`
+      background-color: orange;
+      right: 5rem;
+      bottom: 5rem;
+    `};
+    ${media.desktop`
+      background-color: orange;
+      right: 10rem;
+      bottom: 5rem;
+    `};
 `
 
-const Button = ({ scrollToCurrent }) => {
-
-  return (
-    <StyledButton onClick={() => scrollToCurrent()}>Now</StyledButton>
-  )
-}
-
 export default Button
+

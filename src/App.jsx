@@ -1,5 +1,4 @@
-import './App.css';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useQuery } from 'react-query'
 import Sidebar from './components/Sidebar';
 import Timeline from './components/Timeline';
@@ -18,15 +17,11 @@ const App = () => {
   )
 
   const [linePosition, setLinePosition] = useState((24 * 20) / (2400 / getMomentInDay(new Date())))
-  const ref = useRef()
 
   const scrollToCurrent = () => {
-
-
-    console.log('Hello scroll to current', ref.current)
     window.scrollTo({
       top: 0,
-      left: linePosition * 16 - window.innerWidth / 2 + 160,
+      left: linePosition * 16 - window.innerWidth / 2 + 80 * 1.5,
       behavior: "smooth"
     });
   };
@@ -34,7 +29,6 @@ const App = () => {
   useEffect(() => {
     setTimeout(() => scrollToCurrent(), 100);
   }, []);
-
 
   if (isLoading) {
     return 'Loading...'
@@ -45,26 +39,27 @@ const App = () => {
   }
 
   return (
-    <div ref={ref} className="App">
-      <StyledWrapper >
-
-        <Line channels={data.channels}></Line>
-        <Timeline></Timeline>
-        <Sidebar channels={data.channels} />
+    <StyledApp>
+      <Sidebar channels={data.channels} />
+      <StyledWrapper>
+        <Line channels={data.channels} />
+        <Timeline />
         <Program channels={data.channels} />
+        <Button scrollToCurrent={scrollToCurrent} />
       </StyledWrapper>
-      <Button scrollToCurrent={scrollToCurrent}></Button>
-
-    </div>
+    </StyledApp>
   );
 }
 
+const StyledApp = styled.div`
+  text-align: center;
+  width: fit-content;
+  height: 100vh;
+  background-color: #323232;
+`
+
 const StyledWrapper = styled.div`
-  /* overflow: scroll; */
-  /* width: 24 * 20 + 10 + "rem";
-  height: 100%;
-  display: flex;
-  z-index: -1; */
+  position: relative;
 `
 
 export default App;

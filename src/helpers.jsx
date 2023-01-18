@@ -1,7 +1,3 @@
-import React from 'react'
-
-const end = "2023-01-16T03:10:00+01:00"
-const start = "2023-01-16T02:50:00+01:00"
 
 const doDoubleDigStr = (n) => {
   return n < 10 ? "0" + n : String(n);
@@ -19,7 +15,6 @@ export const formatShowTime = (start) => {
   const formatedDate = getMomentInDay(new Date(start))
   return formatedDate
 }
-
 
 export const extractTime = (time) => {
   const min = doDoubleDigStr(new Date(time).getMinutes());
