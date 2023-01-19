@@ -1,5 +1,5 @@
 {
-  "name": "dunicn-epg-app",
+  "name": "create-dunicn-epg-app",
   "version": "0.1.0",
   "bin": ".bin/cli.js",
   "dependencies": {
