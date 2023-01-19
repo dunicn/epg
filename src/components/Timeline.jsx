@@ -13,6 +13,7 @@ const Timeline = () => {
       {hours.map(hour =>
         <StyledHour key={hour}>
           <StyledHourP>{hour}</StyledHourP>
+          <StyledDivider></StyledDivider>
         </StyledHour>)}
     </StyledHours>
   )
@@ -38,8 +39,6 @@ const StyledHour = styled.li`
   display: flex;
   align-items: center;
   justify-content: start;
-  /* border-right: 0.5px solid; */
-  /* border-left: 0.5px solid; */
   border-bottom: 0.5px solid;
   border-image: linear-gradient(to , #000 50%, transparent 50%) 100% 1;
 `
@@ -49,6 +48,13 @@ const StyledHourP = styled.p`
   margin-left: -1.1rem;
   color: white;
   margin-bottom: 2rem;
+`
+
+const StyledDivider = styled.div`
+  margin-left: -20px;
+  width: 1px;
+  height: 0.6rem;
+  background-color: white;
 `
 
 export default Timeline

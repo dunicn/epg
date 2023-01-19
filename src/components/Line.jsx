@@ -9,9 +9,9 @@ const Line = ({ channels }) => {
 
   return (
     <>
-      <StyledLineTime left={linePosition - 0.2} >
+      <StyledLineTime left={linePosition - 0.1} >
       </StyledLineTime >
-      <StyledLineChannels left={linePosition - 0.1} height={channels.length * 5 + 3}>
+      <StyledLineChannels left={linePosition} height={channels.length * 5 + 3}>
       </StyledLineChannels>
     </>
   )

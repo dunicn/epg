@@ -17,8 +17,8 @@ const Show = ({ show }) => {
   const endTime = extractTime(end)
   return (
     <StyledShow width={finalWidth} isLive={isLive}>
-      <h4>{title}</h4>
-      <p >{startTime} - {endTime}</p>
+      <StyledTitle>{title}</StyledTitle>
+      <StyledTime >{startTime} - {endTime}</StyledTime>
     </StyledShow>
   )
 }
@@ -34,7 +34,18 @@ const StyledShow = styled.div`
   height: 5rem;
   background-color: ${({ isLive }) => isLive ? '#202020' : 'black'};
   font-family: "Courier";
-  box-shadow:1px 1px 1px 1px grey inset;  
+  box-shadow: 1px 1px 1px 1px gray inset;
+`
+
+const StyledTitle = styled.p`
+  font-size: 0.9rem;
+  font-weight: bold;
+`
+
+const StyledTime = styled.p`
+  color: lightcyan;
+  font-size: 0.8rem;
+
 `
 
 export default Show 

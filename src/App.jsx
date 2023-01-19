@@ -21,7 +21,7 @@ const App = () => {
   const scrollToCurrent = () => {
     window.scrollTo({
       top: 0,
-      left: linePosition * 16 - window.innerWidth / 2 + 80 * 1.5,
+      left: linePosition * 16 - window.innerWidth / 2 + 160 * 1.5,
       behavior: "smooth"
     });
   };

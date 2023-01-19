@@ -39,10 +39,11 @@ const StyledChannel = styled.li`
   align-items: center;
   justify-content: center;
   height: 5rem;
-  box-shadow:1px 1px 1px 1px grey inset;  
+  box-shadow: 2px 2px 4px 2px grey inset; 
   background-color: #323232;
   color: white;
   font-family: "Courier";
+  font-size: 1.1rem;
   ${media.tablet`
   background-color: #323232;
   `};
