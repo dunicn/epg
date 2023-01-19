@@ -18,21 +18,21 @@ const Line = ({ channels }) => {
 }
 
 const StyledLineTime = styled.div`
+  position: absolute;
   width: 5px;
   background-color: orange;
   margin-left: ${({ left }) => left}rem;
   height: 3rem;
   z-index: 10;
-  position: absolute;
   border-radius: 0.25rem;
 `
 const StyledLineChannels = styled.div`
+  position: absolute;
   width: 1px;
   background-color: orange;
   margin-left: ${({ left }) => left}rem;
   height: ${({ height }) => height}rem;
   z-index: 10;
-  position: absolute;
 `
 
 export default Line

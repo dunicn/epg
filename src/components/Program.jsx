@@ -41,7 +41,6 @@ const StyledChannel = styled.ul`
   list-style: none;
   box-shadow:1px 1px 1px black;
   color: white;
-  /* border-bottom: 0.5px solid; */
 `
 
 export default Program
