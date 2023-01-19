@@ -6,7 +6,7 @@ I've user ReactQuery to fetch the data from already provided mock-api and styled
 To install and run it: 
 
 ```
-npx create-dunicn-epg-app your-project-name
+npx create-dunicn-epg your-project-name
 
 cd your-project-name && npm start
 ```
